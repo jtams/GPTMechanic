@@ -1,0 +1,67 @@
+#inputfield {
+    display: grid;
+    width: 80%;
+    max-width: 1200px;
+    min-width: 330px;
+    margin: auto;
+    margin-top: 100px;
+    column-gap: 10px;
+    grid-template:
+        "labelF labelF" 50px
+        "inputF buttonF" 60px /
+        1fr 100px;
+    label {
+        grid-area: labelF;
+        font-size: 24px;
+    }
+    input {
+        grid-area: inputF;
+        font-size: 24px;
+        border-radius: 4px;
+    }
+    button {
+        grid-area: buttonF;
+        font-size: 24px;
+        border-radius: 4px;
+        background-color: rgb(21, 92, 223);
+        // background-color: rgb(205, 211, 228);
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            background-color: rgb(28, 81, 180);
+        }
+        &:active {
+            background-color: rgb(34, 74, 148);
+        }
+    }
+}
+
+#response {
+    margin-top: 50px;
+    p {
+        color: black;
+        font-size: 24px;
+        font-family: monospace;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #inputfield {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #inputfield {
+        width: 95%;
+        grid-template:
+            "labelF labelF" 50px
+            "inputF buttonF" 60px /
+            75% 80px;
+        label {
+            font-size: 18px;
+        }
+    }
+}

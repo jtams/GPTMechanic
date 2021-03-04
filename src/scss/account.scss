@@ -1,0 +1,52 @@
+#accountForm {
+    display: grid;
+    margin: auto;
+    width: 100%;
+    grid-template:
+        "emailL" 50px
+        "email" 50px
+        "passwordL" 50px
+        "password" 50px
+        "button" 70px /
+        100%;
+
+    label {
+        font-size: 24px;
+        padding-top: 15px;
+        text-align: left;
+    }
+
+    label[for="email"] {
+        grid-area: emailL;
+    }
+    label[for="password"] {
+        grid-area: passwordL;
+    }
+
+    input[name="email"] {
+        grid-area: email;
+    }
+    input[name="emailL"] {
+        grid-area: emailL;
+    }
+
+    input {
+        border-radius: 4px;
+        font-size: 22px;
+    }
+
+    button {
+        border-radius: 4px;
+        grid-area: button;
+        margin-top: 20px;
+        background-color: rgb(49, 67, 117);
+        color: white;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(46, 60, 100);
+        }
+    }
+}
